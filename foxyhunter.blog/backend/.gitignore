@@ -1,0 +1,10 @@
+data/cache/*
+!data/cache/.gitkeep
+
+data/posts/*.md
+
+data/posts/images/*
+!data/posts/images/.gitkeep
+
+data/posts/thumbnails/*
+!data/posts/thumbnails/.gitkeep

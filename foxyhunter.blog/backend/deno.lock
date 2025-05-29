@@ -31,11 +31,11 @@
     "jsr:@std/path@1": "1.0.8",
     "jsr:@ventgrey/slsy@1.1.3": "1.1.3",
     "npm:@types/node@*": "22.15.15",
-    "npm:dompurify@^3.2.6": "3.2.6",
     "npm:marked@^15.0.12": "15.0.12",
     "npm:path-to-regexp@6.2.1": "6.2.1",
     "npm:path-to-regexp@^6.3.0": "6.3.0",
-    "npm:sanitize-html@2.17.0": "2.17.0"
+    "npm:sanitize-html@2.17.0": "2.17.0",
+    "npm:sanitize-html@^2.17.0": "2.17.0"
   },
   "jsr": {
     "@oak/commons@0.11.0": {
@@ -205,12 +205,6 @@
         "domelementtype"
       ]
     },
-    "dompurify@3.2.6": {
-      "integrity": "sha512-/2GogDQlohXPZe6D6NOgQvXLPSYBqIWMnZ8zzOhn09REE4eyAzb+Hed3jhoM9OkuaJ8P6ZGTTVWQKAi8ieIzfQ==",
-      "optionalDependencies": [
-        "@types/trusted-types"
-      ]
-    },
     "domutils@3.2.2": {
       "integrity": "sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==",
       "dependencies": [
@@ -350,8 +344,8 @@
       "jsr:@oak/oak@16.1.0",
       "jsr:@std/assert@1",
       "jsr:@ventgrey/slsy@1.1.3",
-      "npm:dompurify@^3.2.6",
-      "npm:marked@^15.0.12"
+      "npm:marked@^15.0.12",
+      "npm:sanitize-html@^2.17.0"
     ]
   }
 }

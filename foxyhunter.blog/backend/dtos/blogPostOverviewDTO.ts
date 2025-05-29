@@ -1,4 +1,4 @@
-export type blogPost = {
+export type blogPostOverview = {
     slug: string,
     title: string,
     date: Date,
