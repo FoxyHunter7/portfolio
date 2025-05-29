@@ -1,13 +1,7 @@
 import { Context } from "@oak/oak";
-
-const BLOGPOSTS_DATA_DIR = '/data/blog/posts'
+import { getAllPosts } from "../../repositories/blogFileRepository.ts";
 
 export const getPosts = async (ctx: Context) => {
-    const posts = []
-
-    for await (const entry of Deno.readDir(BLOGPOSTS_DATA_DIR)) {
-        if (entry.isFile && entry.name.endsWith('.md')) {
-
-        }
-    }
+    ctx.response.type = 'json';
+    ctx.response.body = JSON.stringify(await getAllPosts());
 }

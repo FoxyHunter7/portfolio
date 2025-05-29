@@ -3,7 +3,7 @@ import { Context, Next } from "@oak/oak";
 
 // Export configured Slsy instance
 const slsy = new Slsy({
-    crossdomain: { permittedPolicies: 'same-origin' },
+    crossdomain: { permittedPolicies: 'master-only' },
     dontSniffMimetype: true,
     frameguard: { action: "deny" },
     hidePoweredBy: null,

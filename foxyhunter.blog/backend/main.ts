@@ -1,14 +1,11 @@
 import { Application } from '@oak/oak'
-import { Slsy } from '@ventgrey/slsy'
-import { DOMPurify } from 'dompurify'
-import { marked } from 'marked'
+import slsy from "./middleware/slsy.ts"
+import blogRouter from "./routes/blog.ts";
 
 const app = new Application();
 
-const slsy: Slsy = new Slsy({
-    crossdomain: { permittedPolicies: 'same-origin' },
-    dontSniffMimetype: true,
-    frameguard: { action: "deny" },
-    hidePoweredBy: null,
-    hsts: { includeSubDomains: true }
-});
+app.use(slsy);
+app.use(blogRouter.routes());
+app.use(blogRouter.allowedMethods())
+
+await app.listen({ port: 8000 });
