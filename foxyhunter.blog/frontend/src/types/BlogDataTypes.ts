@@ -1,14 +1,14 @@
 type BlogPost = {
   slug: string,
-  date: Date,
+  date: string,
   html: string
 }
 
 type BlogPostOverview = {
   slug: string,
   title: string,
-  date: Date,
-  thumbnailUrl: string | null
+  date: string,
+  thumbnail_url: string | null
 }
 
 export type { BlogPost, BlogPostOverview }
