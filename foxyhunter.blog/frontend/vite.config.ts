@@ -15,4 +15,16 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    proxy: {
+      '/thumbnails': {
+        target: 'https://api.foxyhunter.blog',
+        changeOrigin: true,
+      },
+      '/images': {
+        target: 'https://api.foxyhunter.blog',
+        changeOrigin: true,
+      }
+    }
+  }
 })
